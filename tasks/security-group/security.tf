@@ -1,7 +1,7 @@
 resource "aws_security_group" "CreateSG" {   
   name        = "TerraformSG"
   description = "Allow SSH inbound traffic"
-  egress {
+  ingress {
     from_port        = 22
     to_port          = 22
     protocol         = "-1"

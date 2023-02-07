@@ -20,3 +20,4 @@ resource "aws_instance" "first_ec2" {
 # Reference to Resource
 # first_label.second_label.attribute 
 # Attributes are something that is known after the creation
+# Cannot be a string because References are dynamic not static

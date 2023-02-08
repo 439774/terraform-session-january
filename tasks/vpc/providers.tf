@@ -1,3 +1,5 @@
 provider "aws" {
-    region = "${var.region}" # "${}" Is used to expand a variable
+    region = "${var.aws_region}"
 }
+
+# "${}" Is used to expand a variable

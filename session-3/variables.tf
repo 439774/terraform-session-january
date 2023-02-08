@@ -17,3 +17,7 @@ variable "env" {
     description = "This is an instance type for EC2 instances"
     default = "dev"
 }
+
+variable "aws_region" {    
+    default = "us-east-1"
+}

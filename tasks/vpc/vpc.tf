@@ -3,4 +3,4 @@ resource "aws_vpc" "task_vpc" {
   tags = {
     Name = "terraform_vpc"
   }
-}
+} 

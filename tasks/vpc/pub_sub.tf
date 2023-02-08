@@ -3,7 +3,7 @@ resource "aws_subnet" "pub_sub_a" {
   cidr_block = "10.0.1.0/24"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "pub_sub_a"
+    Name = "public_sub_a"
   }
 }
 
@@ -12,7 +12,7 @@ resource "aws_subnet" "pub_sub_b" {
   cidr_block = "10.0.2.0/24"
   availability_zone = "us-east-1b"
   tags = {
-    Name = "pub_sub_b"
+    Name = "public_sub_b"
   }
 }
 
@@ -21,6 +21,6 @@ resource "aws_subnet" "pub_sub_c" {
   cidr_block = "10.0.3.0/24"
   availability_zone = "us-east-1c"
   tags = {
-    Name = "pub_sub_c"
+    Name = "public_sub_c"
   }
 }

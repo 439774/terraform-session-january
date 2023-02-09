@@ -19,7 +19,9 @@ variable "ami" {
 variable "env" {
     type = string
     description = "This is an instance type for EC2 instances"
-    default = "dev"
+    default = {
+      Name = "dev"
+    }
 }
 
 variable "aws_region" {    

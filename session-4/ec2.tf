@@ -4,6 +4,7 @@ resource "aws_instance" "first_ec2" {
   vpc_security_group_ids = [ aws_security_group.main_sg.id ]
   tags = {
     Name = "${var.env}-instance"
+    Name1 = format("%s-instance", var.env)
   }
 }
 

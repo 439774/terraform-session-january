@@ -10,7 +10,7 @@ data "aws_ami" "amazon_linux_2" {
   }
 
   filter {
-    name   = "root-device-type"
+    name   = "architecture"
     values = ["x86_64"]
   }
 }

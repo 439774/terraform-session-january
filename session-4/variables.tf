@@ -10,20 +10,8 @@ variable "instance_type" {
     default = "t2.micro"
 }
 
-variable "ami" {
-    type = string
-    description = "This is an instance type for EC2 instances"
-    default = "ami-0aa7d40eeae50c9a9"
-}
-
 variable "env" {
     type = string
-    description = "This is an instance type for EC2 instances"
-    default = {
-      Name = "dev"
-    }
-}
-
-variable "aws_region" {    
-    default = "us-east-1"
+    description = "This is an instance TAG for EC2 instances"
+    default = "dev"
 }

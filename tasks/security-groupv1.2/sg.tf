@@ -14,12 +14,13 @@ resource "aws_security_group_rule" "ingress" {
 }
 
 resource "aws_security_group_rule" "egress" {
+  count = 1
   type              = "egress"
   to_port           = 0
   protocol          = "${var.protocol}"
   from_port         = 0
   security_group_id = aws_security_group.main_sg.id
-  cidr_blocks = [ format("%s", var.cidrs) ]
+  cidr_blocks = [ element(var.cidrs, 0) ]
 }
 
 # count.index = count the indexes

@@ -15,3 +15,9 @@ variable "env" {
     description = "This is an instance TAG for EC2 instances"
     default = "dev"
 }
+
+variable "ports" {
+    type = list(string)
+    description = "List of ports"
+    default = [ "22" ]
+}

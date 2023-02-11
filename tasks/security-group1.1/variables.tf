@@ -9,7 +9,7 @@ variable "cidr_blocks" {
 }
 variable "protocol" {
   type = string
-  description = "specify protocol type"
+  description = "protocol type"
   default ="tcp"
 }
 variable "port1" {

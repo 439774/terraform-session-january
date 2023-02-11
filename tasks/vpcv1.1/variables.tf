@@ -1,6 +1,12 @@
 variable "aws_region" {    
     default = "us-east-1"
 }
+
+variable "open_cidr" {
+  type = string
+  default = "0.0.0.0/0"
+}
+
 # Cidr Block For Public
 variable "cidr_block_public_a" {
   type = string

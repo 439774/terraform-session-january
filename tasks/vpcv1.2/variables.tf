@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "open_cidr" {
-  type = string(string)
+  type = list(string)
   default = ["0.0.0.0/0", "10.0.0.0/16"]
 }
 

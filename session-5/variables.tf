@@ -19,5 +19,5 @@ variable "env" {
 variable "ports" {
     type = list(string)
     description = "List of ports"
-    default = [ "22" ]
+    default = [ "22", "80" ]
 }

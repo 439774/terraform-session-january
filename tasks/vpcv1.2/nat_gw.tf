@@ -1,7 +1,7 @@
 resource "aws_nat_gateway" "task_nat_gw" {
-  count = (aws_subnet.public_sub_a)
+  count = (aws_subnet.public_sub_a.index)
   allocation_id = aws_eip.vpc_eip.allocation_id
-  subnet_id     = element(aws_subnet.pub_sub_a, count.index)
+  subnet_id     = element(aws_subnet.pub_sub_a.index, count.index)
 
   tags = {
     Name = "terra_nat_gw"

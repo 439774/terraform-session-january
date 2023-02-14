@@ -9,7 +9,7 @@ echo "Environment is set to $ENV"
 
 terraform init
 terraform plan -var-file=$ENV.tfvars
-terraform destroy -var-file=$ENV.tfvars -auto-approve
+terraform apply -var-file=$ENV.tfvars -auto-approve
 
 
 echo "Rolling back the backend"

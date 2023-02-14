@@ -5,7 +5,7 @@ variable "aws_region" {
 # Input Variables
 
 variable "env" {
-    type = list(string)
+    type = string
     description = "This variable is for enviorment"
-    default = [ "dev", "qa", "stage", "production" ]
+    default = "dev"
 }

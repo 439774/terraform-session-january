@@ -9,3 +9,5 @@ terraform {
 
 
 # 1. You cannot use any variables in key
+# 2. If you want to isolate infrastrucuture and reuse your configuration files, must isolate the backend
+# 3. isolating backend = isolating enviroment

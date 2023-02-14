@@ -4,20 +4,8 @@ variable "aws_region" {
 
 # Input Variables
 
-variable "instance_type" {
-    type = string
-    description = "This is an instance type for EC2 instances"
-    default = "t2.micro"
-}
-
 variable "env" {
     type = string
-    description = "This is an instance TAG for EC2 instances"
+    description = "This variable is for enviorment"
     default = "dev"
-}
-
-variable "ports" {
-    type = list(string)
-    description = "List of ports"
-    default = [ "22", "80", "443", "3306" ] # 0 1
 }

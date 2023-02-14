@@ -1,8 +1,8 @@
 resource "aws_sqs_queue" "main" {
     count = length(var.env[*])
-    name = "${var.env[count.index]}-sqs"
+    name = format("%s-sqs", var.env[count.index])
     tags = {
-        enviorment = var.env
-        Name = format("${var.env[count.index]}-sqs", var.env)  # dev-sqs, qa-sqs, stage-sqs, prod-sqs
+        enviorment = var.env[0]
+        Name = format("%s-sqs", var.env[count.index])  # dev-sqs, qa-sqs, stage-sqs, prod-sqs
     }     
 }

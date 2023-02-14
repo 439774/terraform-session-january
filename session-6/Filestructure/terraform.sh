@@ -11,7 +11,7 @@ terraform init
 terraform plan -var-file=$ENV.tfvars
 
 read -p "You sure you wanna apply it?" apply 
-if $apply == [yes]:
+if [yes];
 then terraform apply -var-file=$ENV.tfvars -auto-approve
 else echo "Terraform is not gonna apply"
 fi

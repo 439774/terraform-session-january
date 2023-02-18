@@ -4,6 +4,6 @@ resource "aws_subnet" "pub_sub_a" {
   cidr_block = format("%s", element(var.public_cidrs, count.index))
   availability_zone = format("%s", element(var.global_az, count.index))
   tags = {
-    Name = format("%s", element(var.global_az, count.index))
+    Name = "aws-${var.team}-${var.env}-${var.app}-vpc-${var.index}"
   }
 }

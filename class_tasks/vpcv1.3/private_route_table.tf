@@ -6,6 +6,6 @@ resource "aws_route_table" "priv_route_table_task" {
     nat_gateway_id = aws_nat_gateway.task_nat_gw.id
   }
   tags = {
-    Name = "terra_priv_route_table"
+    Name = local.name
   }
 }

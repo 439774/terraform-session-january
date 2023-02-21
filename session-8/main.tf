@@ -15,11 +15,23 @@ resource "aws_instance" "first_ec2" {
       private_key = file("~/.ssh/id_rsa")
     }
   }
+  provisioner "remote_exec" {
+    inline = [
+        "sudo yum install httpd -y",
+        "sudo systemctl enable httpd",
+        "sudo systemctl start httpd",
+        "sudo cp /tmp/index.html /var/www/html/index.html"
+    ]
+  }
 }   
 
 resource "aws_key_pair" "terraform_server" {
   key_name = "Terraform-Server-key"
   public_key = file("~/.ssh/id_rsa.pub")
+}
+
+output "instance_ip" {
+  value = aws_instace.first_ec2.public_ip
 }
 
 

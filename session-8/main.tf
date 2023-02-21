@@ -3,7 +3,19 @@ resource "aws_instance" "first_ec2" {
   instance_type          = "t2.micro"
   vpc_security_group_ids = [ aws_security_group.main_sg.id ]
   key_name = aws_key_pair.terraform_server.key_name
-}
+
+  provisioner "file" {
+    source = "/home/ec2-user/terraform-session-january/session-8/index.html" # path on Terraform Server
+    destination = "/tmp/index.html" # path for the Remote Server
+
+    connection {
+      type = "ssh"
+      user = "ec2-user"
+      host = self.public_ip
+      private_key = file("~/.ssh/id_rsa")
+    }
+  }
+}   
 
 resource "aws_key_pair" "terraform_server" {
   key_name = "Terraform-Server-key"

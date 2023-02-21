@@ -1,5 +1,5 @@
 resource "aws_security_group" "main_sg" {   
-    name        = "main"
+    name        = local.name
     description = "Allow SSH inbound traffic"
 }
 

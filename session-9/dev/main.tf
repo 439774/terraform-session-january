@@ -11,7 +11,7 @@ module "ec2_instance" {
     env = "dev"
     ami = "ami-0aa7d40eeae50c9a9"
     instance_type = "t2.micro"
-    sg = [module.ec2_sg.id]  # Module.Module_Name.Attribute
+    sg = [module.ec2_sg.main_sg_id]  # Module.Module_Name.Attribute
 }
 
 module "ec2_sg" {
@@ -22,3 +22,5 @@ module "ec2_sg" {
 # How to Reference to Child Module?
 
 # You always reference to Child Module outputs
+
+# Module.Module_Name.Output_Name

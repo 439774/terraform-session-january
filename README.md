@@ -39,3 +39,4 @@ Argument consists of name and value
 Working Directory
 - Where you have all Terraform configuration files.
 - Example: session-2 -->
+

@@ -18,3 +18,7 @@ module "ec2_sg" {
     source = "../../modules/sg"
     env = "dev"
 }
+
+# How to Reference to Child Module?
+
+# You always reference to Child Module outputs
